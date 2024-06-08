@@ -5,7 +5,7 @@ import MainPage from '/src/MainPage.vue'
 import HouseDetails from '/src/components/HouseDetails.vue';
 
 const routes = [
-    { path: '/', redirect: '/login' },
+    { path: '/', redirect: '/main' },
     { path: '/login', component: Login },
     { path: '/signup', component: Signup },
     { path: '/main', component: MainPage },
