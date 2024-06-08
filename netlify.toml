@@ -1,0 +1,14 @@
+[[redirects]]
+  from = "/signup"
+  to = "/login"
+  status = 301
+
+[[redirects]]
+  from = "/login"
+  to = "/main"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/main"
+  status = 200
