@@ -1,5 +1,5 @@
 # Redirect from root URL to /login
-/    /login    301
+/    /main   301
 
 # Redirect all requests to the main page
 /*    /main    200
