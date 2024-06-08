@@ -259,7 +259,7 @@ function showPopup(latlng, marker, index) {
 onMounted(async () => {
   adjustMapHeight();
   try {
-    axios.get("./Netlify/get-data.js") // Updated URL for Netlify function
+    axios.get("/.netlify/functions/get-data")
         .then(response => {
           initiateMap(response.data); // Assuming response.data is the marker data
         })
