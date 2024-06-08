@@ -1,11 +1,14 @@
 const fs = require('fs');
 
-exports.handler = async (event, context) => {
+app.get('/data', (req, res) => {
     // Read the JSON file from the server filesystem
-    const data = fs.readFileSync('./casas.json', 'utf8');
-    
-    return {
-        statusCode: 200,
-        body: data
-    };
-};
+    fs.readFile('casas.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send('Internal Server Error');
+            return;
+        }
+        // Send the JSON data as a response to the client
+        res.json(JSON.parse(data));
+    });
+});
